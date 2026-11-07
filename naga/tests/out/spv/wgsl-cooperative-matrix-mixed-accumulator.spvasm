@@ -60,18 +60,18 @@ OpMemberDecorate %16 0 Offset 0
 %25 = OpAccessChain  %24  %15 %22
 OpBranch %29
 %29 = OpLabel
-%33 = OpAccessChain  %30  %23 %22
+%33 = OpAccessChain  %30  %12 %22 %22
 %34 = OpCooperativeMatrixLoadKHR  %31  %33 %32 %10
-%36 = OpAccessChain  %30  %23 %22
+%36 = OpAccessChain  %30  %12 %22 %22
 %37 = OpCooperativeMatrixLoadKHR  %35  %36 %32 %10
-%39 = OpAccessChain  %38  %25 %22
+%39 = OpAccessChain  %38  %15 %22 %22
 %40 = OpCooperativeMatrixLoadKHR  %7  %39 %32 %10
 OpStore %26 %40
 %41 = OpLoad  %7  %26
 %42 = OpCooperativeMatrixMulAddKHR  %7  %34 %37 %41
 OpStore %26 %42
 %43 = OpLoad  %7  %26
-%44 = OpAccessChain  %38  %25 %22
+%44 = OpAccessChain  %38  %15 %22 %22
 OpCooperativeMatrixStoreKHR %44 %43 %32 %10
 OpReturn
 OpFunctionEnd

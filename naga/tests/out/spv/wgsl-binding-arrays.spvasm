@@ -166,7 +166,7 @@ OpDecorate %395 NonUniform
 %56 = OpAccessChain  %54  %42 %55
 OpBranch %74
 %74 = OpLabel
-%76 = OpAccessChain  %75  %56 %55
+%76 = OpAccessChain  %75  %42 %55 %55
 %77 = OpLoad  %3  %76
 %78 = OpCompositeExtract  %3  %46 0
 %79 = OpLoad  %23  %68

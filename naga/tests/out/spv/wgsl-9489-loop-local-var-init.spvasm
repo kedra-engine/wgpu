@@ -131,7 +131,7 @@ OpBranch %86
 %89 = OpIMul  %6  %88 %26
 %90 = OpLoad  %6  %36
 %91 = OpIAdd  %6  %89 %90
-%93 = OpAccessChain  %92  %21 %91
+%93 = OpAccessChain  %92  %10 %20 %91
 %94 = OpLoad  %3  %93
 %95 = OpCompositeConstruct  %9  %94 %94 %94 %94
 %96 = OpLoad  %9  %31
@@ -153,14 +153,14 @@ OpBranch %67
 %103 = OpIMul  %6  %102 %28
 %105 = OpAccessChain  %104  %31 %20
 %106 = OpLoad  %3  %105
-%107 = OpAccessChain  %92  %23 %103
+%107 = OpAccessChain  %92  %13 %20 %103
 OpStore %107 %106
 %108 = OpLoad  %6  %29
 %109 = OpIMul  %6  %108 %28
 %110 = OpIAdd  %6  %109 %27
 %111 = OpAccessChain  %104  %34 %20
 %112 = OpLoad  %3  %111
-%113 = OpAccessChain  %92  %23 %110
+%113 = OpAccessChain  %92  %13 %20 %110
 OpStore %113 %112
 OpBranch %66
 %66 = OpLabel

@@ -35,14 +35,14 @@ layout(set = 0, binding = 3, std140) uniform _19_18
 
 void main()
 {
-    uint64_t _39 = atomicMax(_9._m0, _18._m0);
-    uint64_t _44 = atomicMax(_12._m0[1u], 1ul + _18._m0);
-    uint64_t _47 = atomicMax(_15._m0._m0, 1ul);
-    uint64_t _51 = atomicMax(_15._m0._m1[1u], uint64_t(gl_LocalInvocationID.x));
+    uint64_t _40 = atomicMax(_9._m0, _18._m0);
+    uint64_t _47 = atomicMax(_12._m0[1u], 1ul + _18._m0);
+    uint64_t _50 = atomicMax(_15._m0._m0, 1ul);
+    uint64_t _54 = atomicMax(_15._m0._m1[1u], uint64_t(gl_LocalInvocationID.x));
     barrier();
-    uint64_t _55 = atomicMin(_9._m0, _18._m0);
-    uint64_t _58 = atomicMin(_12._m0[1u], 1ul + _18._m0);
-    uint64_t _60 = atomicMin(_15._m0._m0, 1ul);
-    uint64_t _64 = atomicMin(_15._m0._m1[1u], uint64_t(gl_LocalInvocationID.x));
+    uint64_t _59 = atomicMin(_9._m0, _18._m0);
+    uint64_t _64 = atomicMin(_12._m0[1u], 1ul + _18._m0);
+    uint64_t _66 = atomicMin(_15._m0._m0, 1ul);
+    uint64_t _70 = atomicMin(_15._m0._m1[1u], uint64_t(gl_LocalInvocationID.x));
 }
 

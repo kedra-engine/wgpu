@@ -8253,16 +8253,16 @@ OpBranch %375
 OpLine %3 7254 22
 %376 = OpCompositeExtract  %8  %366 0
 OpLine %3 7256 36
-%378 = OpAccessChain  %377  %370 %135
+%378 = OpAccessChain  %377  %29 %135 %135
 %379 = OpLoad  %10  %378
 OpLine %3 7256 59
-%381 = OpAccessChain  %380  %370 %126
+%381 = OpAccessChain  %380  %29 %135 %126
 %382 = OpLoad  %11  %381
 OpLine %3 7256 13
 %383 = OpFunctionCall  %6  %325 %376 %379 %382
 OpLine %3 7258 5
 OpLine %3 7258 51
-%387 = OpAccessChain  %386  %370 %372
+%387 = OpAccessChain  %386  %29 %135 %372
 %388 = OpLoad  %6  %387
 OpLine %3 7258 33
 %389 = OpFunctionCall  %14  %284 %383 %388
@@ -8274,10 +8274,10 @@ OpLine %3 7261 23
 OpLine %3 7261 23
 %392 = OpIMul  %8  %391 %371
 OpLine %3 7263 24
-%394 = OpAccessChain  %393  %370 %135 %135
+%394 = OpAccessChain  %393  %29 %135 %135 %135
 %395 = OpLoad  %8  %394
 OpLine %3 7263 24
-%396 = OpAccessChain  %393  %370 %135 %126
+%396 = OpAccessChain  %393  %29 %135 %135 %126
 %397 = OpLoad  %8  %396
 %398 = OpIMul  %8  %395 %397
 OpLine %3 7263 8
@@ -8292,14 +8292,14 @@ OpReturn
 OpLine %3 7265 28
 %403 = OpCompositeExtract  %8  %366 0
 OpLine %3 7265 15
-%404 = OpAccessChain  %393  %370 %135 %135
+%404 = OpAccessChain  %393  %29 %135 %135 %135
 %405 = OpLoad  %8  %404
 %406 = OpFunctionCall  %8  %313 %403 %405
 %407 = OpIAdd  %8  %376 %406
 OpLine %3 7266 15
 %408 = OpIAdd  %8  %407 %126
 OpLine %3 7267 15
-%409 = OpAccessChain  %393  %370 %135 %135
+%409 = OpAccessChain  %393  %29 %135 %135 %135
 %410 = OpLoad  %8  %409
 %411 = OpIAdd  %8  %407 %410
 OpLine %3 7267 15
@@ -8382,13 +8382,13 @@ OpLine %3 7308 20
 OpLine %3 7311 21
 %462 = OpCompositeExtract  %4  %458 0
 OpLine %3 7311 21
-%463 = OpAccessChain  %393  %446 %373
+%463 = OpAccessChain  %393  %36 %135 %373
 %464 = OpLoad  %8  %463
 %465 = OpConvertUToF  %4  %464
 %466 = OpFMul  %4  %462 %465
 %467 = OpCompositeExtract  %4  %458 1
 OpLine %3 7311 17
-%468 = OpAccessChain  %393  %446 %373
+%468 = OpAccessChain  %393  %36 %135 %373
 %469 = OpLoad  %8  %468
 %470 = OpConvertUToF  %4  %469
 %471 = OpFMul  %4  %467 %470
@@ -8396,7 +8396,7 @@ OpLine %3 7311 17
 %474 = OpExtInst  %4  %1 FClamp %472 %74 %473
 %475 = OpConvertFToU  %8  %474
 OpLine %3 7311 17
-%476 = OpAccessChain  %393  %446 %374
+%476 = OpAccessChain  %393  %36 %135 %374
 %477 = OpLoad  %8  %476
 %478 = OpIAdd  %8  %475 %477
 OpLine %3 7313 12
@@ -8424,17 +8424,17 @@ OpLine %3 7324 17
 %501 = OpCompositeExtract  %6  %484 2
 %502 = OpCompositeExtract  %4  %501 0
 OpLine %3 7324 17
-%503 = OpAccessChain  %393  %496 %373
+%503 = OpAccessChain  %393  %36 %135 %373
 %504 = OpLoad  %8  %503
 %505 = OpConvertUToF  %4  %504
 %506 = OpFMul  %4  %502 %505
 %507 = OpCompositeExtract  %6  %484 2
 %508 = OpCompositeExtract  %4  %507 1
 OpLine %3 7324 70
-%509 = OpAccessChain  %393  %496 %373
+%509 = OpAccessChain  %393  %36 %135 %373
 %510 = OpLoad  %8  %509
 OpLine %3 7324 13
-%511 = OpAccessChain  %393  %496 %373
+%511 = OpAccessChain  %393  %36 %135 %373
 %512 = OpLoad  %8  %511
 %513 = OpIMul  %8  %510 %512
 %514 = OpConvertUToF  %4  %513
@@ -8443,7 +8443,7 @@ OpLine %3 7324 13
 %517 = OpExtInst  %4  %1 FClamp %516 %74 %473
 %518 = OpConvertFToU  %8  %517
 OpLine %3 7324 13
-%519 = OpAccessChain  %393  %496 %374
+%519 = OpAccessChain  %393  %36 %135 %374
 %520 = OpLoad  %8  %519
 %521 = OpIAdd  %8  %518 %520
 OpLine %3 7325 32
@@ -8456,15 +8456,15 @@ OpLine %3 7325 22
 OpLine %3 7326 22
 %527 = OpFunctionCall  %8  %427 %521 %371
 OpLine %3 7328 36
-%528 = OpAccessChain  %377  %496 %135
+%528 = OpAccessChain  %377  %36 %135 %135
 %529 = OpLoad  %10  %528
 OpLine %3 7328 57
-%530 = OpAccessChain  %380  %496 %126
+%530 = OpAccessChain  %380  %36 %135 %126
 %531 = OpLoad  %11  %530
 OpLine %3 7328 13
 %532 = OpFunctionCall  %6  %325 %526 %529 %531
 OpLine %3 7329 31
-%533 = OpAccessChain  %386  %496 %372
+%533 = OpAccessChain  %386  %36 %135 %372
 %534 = OpLoad  %6  %533
 OpLine %3 7329 13
 %535 = OpFunctionCall  %14  %284 %532 %534
@@ -8517,14 +8517,14 @@ OpBranch %536
 OpBranch %536
 %536 = OpLabel
 OpLine %3 7343 15
-%556 = OpAccessChain  %393  %496 %135 %135
+%556 = OpAccessChain  %393  %36 %135 %135 %135
 %557 = OpLoad  %8  %556
 %558 = OpFunctionCall  %8  %313 %526 %557
 %559 = OpIAdd  %8  %526 %558
 OpLine %3 7344 15
 %560 = OpIAdd  %8  %559 %126
 OpLine %3 7345 15
-%561 = OpAccessChain  %393  %496 %135 %135
+%561 = OpAccessChain  %393  %36 %135 %135 %135
 %562 = OpLoad  %8  %561
 %563 = OpIAdd  %8  %559 %562
 OpLine %3 7345 15
@@ -8578,7 +8578,7 @@ OpFunctionEnd
 OpBranch %593
 %593 = OpLabel
 OpLine %3 7397 25
-%595 = OpAccessChain  %594  %592 %126
+%595 = OpAccessChain  %594  %39 %135 %126
 %596 = OpLoad  %23  %595
 %597 = OpCompositeExtract  %5  %580 0
 OpLine %3 7397 25
@@ -8638,17 +8638,17 @@ OpLine %3 7429 13
 OpLine %3 7429 5
 OpStore %629 %645
 OpLine %3 7432 25
-%647 = OpAccessChain  %646  %618 %126
+%647 = OpAccessChain  %646  %42 %135 %126
 %648 = OpLoad  %5  %647
 %649 = OpVectorTimesScalar  %5  %648 %286
 OpLine %3 7434 21
-%650 = OpAccessChain  %646  %618 %135
+%650 = OpAccessChain  %646  %42 %135 %135
 %651 = OpLoad  %5  %650
 %652 = OpCompositeExtract  %5  %607 2
 %653 = OpFSub  %5  %651 %652
 %654 = OpExtInst  %5  %1 Normalize %653
 OpLine %3 7435 20
-%656 = OpAccessChain  %655  %616 %135
+%656 = OpAccessChain  %655  %39 %135 %135
 %657 = OpLoad  %7  %656
 %658 = OpVectorShuffle  %5  %657 %657 0 1 2
 %659 = OpCompositeExtract  %5  %607 2
@@ -8663,7 +8663,7 @@ OpLine %3 7438 32
 OpLine %3 7438 28
 %666 = OpExtInst  %4  %1 FMax %665 %74
 OpLine %3 7439 25
-%667 = OpAccessChain  %646  %618 %126
+%667 = OpAccessChain  %646  %42 %135 %126
 %668 = OpLoad  %5  %667
 %669 = OpVectorTimesScalar  %5  %668 %666
 OpLine %3 7441 37
@@ -8674,7 +8674,7 @@ OpLine %3 7441 33
 OpLine %3 7441 29
 %673 = OpExtInst  %4  %1 Pow %672 %345
 OpLine %3 7442 26
-%674 = OpAccessChain  %646  %618 %126
+%674 = OpAccessChain  %646  %42 %135 %126
 %675 = OpLoad  %5  %674
 %676 = OpVectorTimesScalar  %5  %675 %673
 OpLine %3 7444 18

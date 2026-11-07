@@ -120,15 +120,15 @@ OpBranch %38
 %38 = OpLabel
 OpLine %3 32 12
 OpLine %3 32 12
-%41 = OpAccessChain  %39  %31 %40
+%41 = OpAccessChain  %39  %15 %30 %40
 %42 = OpLoad  %4  %41
 %43 = OpVectorTimesScalar  %14  %37 %42
 OpLine %3 32 12
-%44 = OpAccessChain  %39  %33 %40
+%44 = OpAccessChain  %39  %18 %30 %40
 %45 = OpLoad  %4  %44
 %46 = OpVectorTimesScalar  %14  %43 %45
 OpLine %3 32 12
-%47 = OpAccessChain  %39  %35 %40
+%47 = OpAccessChain  %39  %21 %30 %40
 %48 = OpLoad  %4  %47
 %49 = OpVectorTimesScalar  %14  %46 %48
 OpStore %25 %49

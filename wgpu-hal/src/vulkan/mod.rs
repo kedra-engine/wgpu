@@ -439,6 +439,8 @@ bitflags::bitflags!(
         /// Qualcomm OOMs when there are zero color attachments but a non-null pointer
         /// to a subpass resolve attachment array. This nulls out that pointer in that case.
         const EMPTY_RESOLVE_ATTACHMENT_LISTS = 0x2;
+        /// Retain shader-side storage buffer bounds checks on proprietary Qualcomm.
+        const FORCE_SHADER_BUFFER_BOUNDS_CHECKS = 0x8;
         /// If the following code returns false, then nvidia will end up filling the wrong range.
         ///
         /// ```skip

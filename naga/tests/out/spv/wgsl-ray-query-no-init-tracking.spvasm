@@ -361,12 +361,12 @@ OpBranch %253
 %256 = OpCompositeExtract  %6  %254 0
 %257 = OpIEqual  %8  %256 %35
 %258 = OpSelect  %6  %257 %90 %35
-%259 = OpAccessChain  %255  %250 %35
+%259 = OpAccessChain  %255  %17 %35 %35
 OpStore %259 %258
 %261 = OpCompositeExtract  %3  %254 1
 %262 = OpVectorTimesScalar  %4  %252 %261
 %263 = OpFunctionCall  %4  %229 %262 %254
-%264 = OpAccessChain  %260  %250 %90
+%264 = OpAccessChain  %260  %17 %35 %90
 OpStore %264 %263
 OpReturn
 OpFunctionEnd

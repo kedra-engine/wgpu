@@ -102,7 +102,7 @@ OpBranch %37
 OpBranch %61
 %61 = OpLabel
 %63 = OpLoad  %3  %27
-%65 = OpAccessChain  %64  %22 %63
+%65 = OpAccessChain  %64  %11 %21 %63
 %66 = OpAtomicLoad  %4  %65 %67 %21
 OpStore %29 %66
 OpStore %32 %23
@@ -140,7 +140,7 @@ OpBranch %87
 %92 = OpBitcast  %4  %91
 %93 = OpLoad  %3  %27
 %94 = OpLoad  %4  %29
-%96 = OpAccessChain  %64  %22 %93
+%96 = OpAccessChain  %64  %11 %21 %93
 %97 = OpAtomicCompareExchange  %4  %96 %67 %21 %21 %92 %94
 %98 = OpIEqual  %8  %97 %94
 %95 = OpCompositeConstruct  %9  %97 %98
@@ -204,7 +204,7 @@ OpBranch %114
 OpBranch %132
 %132 = OpLabel
 %134 = OpLoad  %3  %107
-%136 = OpAccessChain  %135  %106 %134
+%136 = OpAccessChain  %135  %14 %21 %134
 %137 = OpAtomicLoad  %3  %136 %67 %21
 OpStore %108 %137
 OpStore %110 %23
@@ -242,7 +242,7 @@ OpBranch %157
 %162 = OpBitcast  %3  %161
 %163 = OpLoad  %3  %107
 %164 = OpLoad  %3  %108
-%166 = OpAccessChain  %135  %106 %163
+%166 = OpAccessChain  %135  %14 %21 %163
 %167 = OpAtomicCompareExchange  %3  %166 %67 %21 %21 %162 %164
 %168 = OpIEqual  %8  %167 %164
 %165 = OpCompositeConstruct  %10  %167 %168

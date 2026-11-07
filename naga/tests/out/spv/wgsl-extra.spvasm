@@ -51,7 +51,7 @@ OpDecorate %20 Location 0
 OpBranch %30
 %30 = OpLabel
 %31 = OpCompositeExtract  %3  %13 1
-%33 = OpAccessChain  %32  %26 %25
+%33 = OpAccessChain  %32  %9 %25 %25
 %34 = OpLoad  %3  %33
 %36 = OpIEqual  %35  %31 %34
 OpSelectionMerge %37 None

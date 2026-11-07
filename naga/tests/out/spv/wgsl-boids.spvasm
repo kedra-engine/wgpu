@@ -319,7 +319,7 @@ OpLine %3 57 8
 %103 = OpLoad  %6  %37
 %104 = OpExtInst  %5  %1 Distance %102 %103
 OpLine %3 57 8
-%106 = OpAccessChain  %105  %28 %33
+%106 = OpAccessChain  %105  %14 %27 %33
 %107 = OpLoad  %5  %106
 %108 = OpFOrdLessThan  %56  %104 %107
 OpLine %3 57 5
@@ -345,7 +345,7 @@ OpLine %3 61 8
 %117 = OpLoad  %6  %37
 %118 = OpExtInst  %5  %1 Distance %116 %117
 OpLine %3 61 8
-%120 = OpAccessChain  %105  %28 %119
+%120 = OpAccessChain  %105  %14 %27 %119
 %121 = OpLoad  %5  %120
 %122 = OpFOrdLessThan  %56  %118 %121
 OpLine %3 61 5
@@ -367,7 +367,7 @@ OpLine %3 64 8
 %131 = OpLoad  %6  %37
 %132 = OpExtInst  %5  %1 Distance %130 %131
 OpLine %3 64 8
-%134 = OpAccessChain  %105  %28 %133
+%134 = OpAccessChain  %105  %14 %27 %133
 %135 = OpLoad  %5  %134
 %136 = OpFOrdLessThan  %56  %132 %135
 OpLine %3 64 5
@@ -440,19 +440,19 @@ OpLine %3 1 1
 %166 = OpLoad  %6  %40
 %167 = OpLoad  %6  %42
 OpLine %3 80 10
-%169 = OpAccessChain  %105  %28 %168
+%169 = OpAccessChain  %105  %14 %27 %168
 %170 = OpLoad  %5  %169
 %171 = OpVectorTimesScalar  %6  %167 %170
 %172 = OpFAdd  %6  %166 %171
 %173 = OpLoad  %6  %44
 OpLine %3 80 10
-%175 = OpAccessChain  %105  %28 %174
+%175 = OpAccessChain  %105  %14 %27 %174
 %176 = OpLoad  %5  %175
 %177 = OpVectorTimesScalar  %6  %173 %176
 %178 = OpFAdd  %6  %172 %177
 %179 = OpLoad  %6  %43
 OpLine %3 80 10
-%181 = OpAccessChain  %105  %28 %180
+%181 = OpAccessChain  %105  %14 %27 %180
 %182 = OpLoad  %5  %181
 %183 = OpVectorTimesScalar  %6  %179 %182
 %184 = OpFAdd  %6  %178 %183
@@ -472,7 +472,7 @@ OpLine %3 1 1
 %191 = OpLoad  %6  %37
 %192 = OpLoad  %6  %40
 OpLine %3 88 10
-%193 = OpAccessChain  %105  %28 %27
+%193 = OpAccessChain  %105  %14 %27 %27
 %194 = OpLoad  %5  %193
 %195 = OpVectorTimesScalar  %6  %192 %194
 %196 = OpFAdd  %6  %191 %195

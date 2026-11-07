@@ -52,13 +52,13 @@ OpDecorate %17 Binding 2
 %27 = OpLoad  %9  %17
 OpBranch %28
 %28 = OpLabel
-%31 = OpAccessChain  %30  %26 %23
+%31 = OpAccessChain  %30  %14 %23 %23
 %32 = OpLoad  %6  %31
 %34 = OpImageFetch  %33  %27 %32 Lod %10
 %35 = OpCompositeExtract  %3  %34 0
 %36 = OpCompositeConstruct  %33  %35 %35 %35 %35
 %37 = OpCompositeExtract  %3  %36 0
-%38 = OpAccessChain  %29  %24 %23
+%38 = OpAccessChain  %29  %11 %23 %23
 OpStore %38 %37
 OpReturn
 OpFunctionEnd

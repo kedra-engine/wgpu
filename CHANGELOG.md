@@ -42,6 +42,16 @@ Bottom level categories:
 
 ## Unreleased
 
+### Bug Fixes
+
+#### Vulkan
+
+- Retain shader-side storage-buffer bounds checks on proprietary Qualcomm drivers, including internal indirect validation, to avoid zeroed valid dependent reads.
+
+#### naga
+
+- Keep accesses to wrapped buffer globals rooted at their storage block in SPIR-V, fixing corrupted matrix reads on affected Vulkan devices without changing shader source or buffer layouts.
+
 ## v30.0.1 (2026-08-21)
 
 ### Bug Fixes

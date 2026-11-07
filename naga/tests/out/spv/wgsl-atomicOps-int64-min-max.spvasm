@@ -1,7 +1,7 @@
 ; SPIR-V
 ; Version: 1.0
 ; Generator: rspirv
-; Bound: 66
+; Bound: 72
 OpCapability Shader
 OpCapability Int64
 OpCapability Int64Atomics
@@ -58,10 +58,10 @@ OpDecorate %22 BuiltIn LocalInvocationId
 %32 = OpTypePointer StorageBuffer %7
 %34 = OpTypePointer Uniform %3
 %36 = OpConstant  %3  1
-%41 = OpTypeInt 32 1
-%40 = OpConstant  %41  1
-%45 = OpConstant  %6  1
-%53 = OpConstant  %6  264
+%43 = OpTypeInt 32 1
+%42 = OpConstant  %43  1
+%48 = OpConstant  %6  1
+%56 = OpConstant  %6  264
 %25 = OpFunction  %2  None %26
 %21 = OpLabel
 %24 = OpLoad  %8  %22
@@ -71,30 +71,36 @@ OpDecorate %22 BuiltIn LocalInvocationId
 %35 = OpAccessChain  %34  %18 %28
 OpBranch %37
 %37 = OpLabel
-%38 = OpLoad  %3  %35
-%39 = OpAtomicUMax  %3  %29 %40 %28 %38
-%42 = OpLoad  %3  %35
-%43 = OpIAdd  %3  %36 %42
-%46 = OpAccessChain  %27  %31 %45
-%44 = OpAtomicUMax  %3  %46 %40 %28 %43
-%48 = OpAccessChain  %27  %33 %28
-%47 = OpAtomicUMax  %3  %48 %40 %28 %36
-%49 = OpCompositeExtract  %6  %24 0
-%50 = OpUConvert  %3  %49
-%52 = OpAccessChain  %27  %33 %45 %45
-%51 = OpAtomicUMax  %3  %52 %40 %28 %50
-OpControlBarrier %5 %5 %53
-%54 = OpLoad  %3  %35
-%55 = OpAtomicUMin  %3  %29 %40 %28 %54
-%56 = OpLoad  %3  %35
-%57 = OpIAdd  %3  %36 %56
-%59 = OpAccessChain  %27  %31 %45
-%58 = OpAtomicUMin  %3  %59 %40 %28 %57
-%61 = OpAccessChain  %27  %33 %28
-%60 = OpAtomicUMin  %3  %61 %40 %28 %36
-%62 = OpCompositeExtract  %6  %24 0
-%63 = OpUConvert  %3  %62
-%65 = OpAccessChain  %27  %33 %45 %45
-%64 = OpAtomicUMin  %3  %65 %40 %28 %63
+%38 = OpAccessChain  %34  %18 %28
+%39 = OpLoad  %3  %38
+%41 = OpAccessChain  %27  %9 %28
+%40 = OpAtomicUMax  %3  %41 %42 %28 %39
+%44 = OpAccessChain  %34  %18 %28
+%45 = OpLoad  %3  %44
+%46 = OpIAdd  %3  %36 %45
+%49 = OpAccessChain  %27  %12 %28 %48
+%47 = OpAtomicUMax  %3  %49 %42 %28 %46
+%51 = OpAccessChain  %27  %15 %28 %28
+%50 = OpAtomicUMax  %3  %51 %42 %28 %36
+%52 = OpCompositeExtract  %6  %24 0
+%53 = OpUConvert  %3  %52
+%55 = OpAccessChain  %27  %15 %28 %48 %48
+%54 = OpAtomicUMax  %3  %55 %42 %28 %53
+OpControlBarrier %5 %5 %56
+%57 = OpAccessChain  %34  %18 %28
+%58 = OpLoad  %3  %57
+%60 = OpAccessChain  %27  %9 %28
+%59 = OpAtomicUMin  %3  %60 %42 %28 %58
+%61 = OpAccessChain  %34  %18 %28
+%62 = OpLoad  %3  %61
+%63 = OpIAdd  %3  %36 %62
+%65 = OpAccessChain  %27  %12 %28 %48
+%64 = OpAtomicUMin  %3  %65 %42 %28 %63
+%67 = OpAccessChain  %27  %15 %28 %28
+%66 = OpAtomicUMin  %3  %67 %42 %28 %36
+%68 = OpCompositeExtract  %6  %24 0
+%69 = OpUConvert  %3  %68
+%71 = OpAccessChain  %27  %15 %28 %48 %48
+%70 = OpAtomicUMin  %3  %71 %42 %28 %69
 OpReturn
 OpFunctionEnd

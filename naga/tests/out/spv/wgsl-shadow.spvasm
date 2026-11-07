@@ -369,10 +369,10 @@ OpFunctionEnd
 OpBranch %95
 %95 = OpLabel
 OpLine %3 37 13
-%97 = OpAccessChain  %96  %91 %88
+%97 = OpAccessChain  %96  %28 %88 %88
 %98 = OpLoad  %5  %97
 OpLine %3 38 21
-%99 = OpAccessChain  %96  %91 %88
+%99 = OpAccessChain  %96  %28 %88 %88
 %100 = OpLoad  %5  %99
 %101 = OpConvertSToF  %6  %77
 %102 = OpMatrixTimesVector  %6  %100 %101
@@ -399,7 +399,7 @@ OpLine %3 41 5
 OpStore %119 %102
 OpLine %3 42 5
 OpLine %3 42 25
-%120 = OpAccessChain  %96  %89 %88
+%120 = OpAccessChain  %96  %25 %88 %88
 %121 = OpLoad  %5  %120
 %122 = OpMatrixTimesVector  %6  %121 %102
 OpLine %3 42 5
@@ -461,7 +461,7 @@ OpBranch %158
 OpLine %3 1 1
 %177 = OpLoad  %7  %151
 OpLine %3 88 29
-%180 = OpAccessChain  %179  %144 %115 %88
+%180 = OpAccessChain  %179  %25 %88 %115 %88
 %181 = OpLoad  %7  %180
 OpLine %3 88 21
 %182 = OpExtInst  %7  %1 UMin %181 %19
@@ -476,7 +476,7 @@ OpBranch %186
 %186 = OpLabel
 OpLine %3 89 21
 %188 = OpLoad  %7  %151
-%190 = OpAccessChain  %189  %147 %188
+%190 = OpAccessChain  %189  %31 %88 %188
 %191 = OpLoad  %16  %190
 OpLine %3 91 38
 %192 = OpLoad  %7  %151
@@ -521,7 +521,7 @@ OpLine %3 1 1
 OpLine %3 99 12
 %214 = OpCompositeConstruct  %6  %213 %49
 OpLine %3 99 12
-%216 = OpAccessChain  %215  %145 %115
+%216 = OpAccessChain  %215  %28 %88 %115
 %217 = OpLoad  %6  %216
 %218 = OpFMul  %6  %214 %217
 OpStore %142 %218
@@ -569,7 +569,7 @@ OpBranch %242
 OpLine %3 1 1
 %255 = OpLoad  %7  %236
 OpLine %3 107 29
-%256 = OpAccessChain  %179  %229 %115 %88
+%256 = OpAccessChain  %179  %25 %88 %115 %88
 %257 = OpLoad  %7  %256
 OpLine %3 107 21
 %258 = OpExtInst  %7  %1 UMin %257 %19
@@ -584,7 +584,7 @@ OpBranch %262
 %262 = OpLabel
 OpLine %3 110 21
 %264 = OpLoad  %7  %236
-%266 = OpAccessChain  %265  %232 %264
+%266 = OpAccessChain  %265  %34 %88 %264
 %267 = OpLoad  %16  %266
 OpLine %3 111 38
 %268 = OpLoad  %7  %236
@@ -629,7 +629,7 @@ OpLine %3 1 1
 OpLine %3 116 12
 %290 = OpCompositeConstruct  %6  %289 %49
 OpLine %3 116 12
-%291 = OpAccessChain  %215  %230 %115
+%291 = OpAccessChain  %215  %28 %88 %115
 %292 = OpLoad  %6  %291
 %293 = OpFMul  %6  %290 %292
 OpStore %227 %293

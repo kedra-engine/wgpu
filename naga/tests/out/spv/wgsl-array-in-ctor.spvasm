@@ -1,7 +1,7 @@
 ; SPIR-V
 ; Version: 1.1
 ; Generator: rspirv
-; Bound: 19
+; Bound: 20
 OpCapability Shader
 OpExtension "SPV_KHR_storage_buffer_storage_class"
 %1 = OpExtInstImport "GLSL.std.450"
@@ -32,6 +32,7 @@ OpMemberDecorate %9 0 Offset 0
 %16 = OpAccessChain  %14  %8 %15
 OpBranch %17
 %17 = OpLabel
-%18 = OpLoad  %7  %16
+%18 = OpAccessChain  %14  %8 %15
+%19 = OpLoad  %7  %18
 OpReturn
 OpFunctionEnd

@@ -8,9 +8,11 @@ use arrayvec::ArrayVec;
 use spirv::Word;
 
 use super::{
-    helpers::map_storage_class, index::BoundsCheckResult, selection::Selection, Block,
-    BlockContext, Dimension, Error, IdGenerator, Instruction, LocalType, LookupType, NumericType,
-    ResultMember, WrappedFunction, Writer, WriterFlags,
+    helpers::{global_needs_wrapper, map_storage_class},
+    index::BoundsCheckResult,
+    selection::Selection,
+    Block, BlockContext, Dimension, Error, IdGenerator, Instruction, LocalType, LookupType,
+    NumericType, ResultMember, WrappedFunction, Writer, WriterFlags,
 };
 use crate::{
     arena::Handle, back::spv::helpers::is_uniform_matcx2_struct_member_access,
@@ -2617,6 +2619,16 @@ impl BlockContext<'_> {
                 }
                 crate::Expression::GlobalVariable(handle) => {
                     let gv = &self.writer.global_variables[handle];
+                    if global_needs_wrapper(
+                        self.ir_module,
+                        &self.ir_module.global_variables[handle],
+                    ) {
+                        // Preserve block-rooted matrix layout through the full access chain.
+                        let var_id = gv.var_id;
+                        let zero = self.get_index_constant(0);
+                        self.temp_list.push(zero);
+                        break var_id;
+                    }
                     break gv.access_id;
                 }
                 crate::Expression::LocalVariable(variable) => {

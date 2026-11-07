@@ -2302,6 +2302,13 @@ impl super::Instance {
                 phd_capabilities.properties.vendor_id == db::qualcomm::VENDOR,
             );
             workarounds.set(
+                super::Workarounds::FORCE_SHADER_BUFFER_BOUNDS_CHECKS,
+                phd_capabilities.properties.vendor_id == db::qualcomm::VENDOR
+                    && phd_capabilities.driver.is_none_or(|driver| {
+                        driver.driver_id == vk::DriverId::QUALCOMM_PROPRIETARY
+                    }),
+            );
+            workarounds.set(
                 super::Workarounds::FORCE_FILL_BUFFER_WITH_SIZE_GREATER_4096_ALIGNED_OFFSET_16,
                 phd_capabilities.properties.vendor_id == db::nvidia::VENDOR,
             );
@@ -2837,7 +2844,13 @@ impl super::Adapter {
                 capabilities: Some(capabilities.iter().cloned().collect()),
                 bounds_check_policies: naga::proc::BoundsCheckPolicies {
                     index: naga::proc::BoundsCheckPolicy::Restrict,
-                    buffer: if self.private_caps.robust_buffer_access2 {
+                    // Valid dependent reads can return zero on proprietary Qualcomm
+                    // without shader bounds checks. Retain hardware robustness too.
+                    buffer: if self.private_caps.robust_buffer_access2
+                        && !self
+                            .workarounds
+                            .contains(super::Workarounds::FORCE_SHADER_BUFFER_BOUNDS_CHECKS)
+                    {
                         naga::proc::BoundsCheckPolicy::Unchecked
                     } else {
                         naga::proc::BoundsCheckPolicy::Restrict

@@ -729,7 +729,15 @@ impl super::Device {
                     if !runtime_checks.bounds_checks {
                         temp_options.bounds_check_policies = naga::proc::BoundsCheckPolicies {
                             index: naga::proc::BoundsCheckPolicy::Unchecked,
-                            buffer: naga::proc::BoundsCheckPolicy::Unchecked,
+                            buffer: if self
+                                .shared
+                                .workarounds
+                                .contains(super::Workarounds::FORCE_SHADER_BUFFER_BOUNDS_CHECKS)
+                            {
+                                naga::proc::BoundsCheckPolicy::Restrict
+                            } else {
+                                naga::proc::BoundsCheckPolicy::Unchecked
+                            },
                             image_load: naga::proc::BoundsCheckPolicy::Unchecked,
                             binding_array: naga::proc::BoundsCheckPolicy::Unchecked,
                         };
@@ -1884,7 +1892,15 @@ impl crate::Device for super::Device {
                 if !desc.runtime_checks.bounds_checks {
                     naga_options.bounds_check_policies = naga::proc::BoundsCheckPolicies {
                         index: naga::proc::BoundsCheckPolicy::Unchecked,
-                        buffer: naga::proc::BoundsCheckPolicy::Unchecked,
+                        buffer: if self
+                            .shared
+                            .workarounds
+                            .contains(super::Workarounds::FORCE_SHADER_BUFFER_BOUNDS_CHECKS)
+                        {
+                            naga::proc::BoundsCheckPolicy::Restrict
+                        } else {
+                            naga::proc::BoundsCheckPolicy::Unchecked
+                        },
                         image_load: naga::proc::BoundsCheckPolicy::Unchecked,
                         binding_array: naga::proc::BoundsCheckPolicy::Unchecked,
                     };

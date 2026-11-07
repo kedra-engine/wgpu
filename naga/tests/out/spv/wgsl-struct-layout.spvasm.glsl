@@ -178,14 +178,14 @@ layout(set = 0, binding = 3, std430) buffer _18_17
     _7 _m0;
 } _17;
 
-layout(location = 0) in float _60;
-layout(location = 1) in vec3 _62;
-layout(location = 2) in float _64;
-layout(location = 0) out vec4 _66;
+layout(location = 0) in float _62;
+layout(location = 1) in vec3 _64;
+layout(location = 2) in float _66;
+layout(location = 0) out vec4 _68;
 
 void main()
 {
-    _66 = vec4(0.0);
+    _68 = vec4(0.0);
 }
 
 
@@ -227,9 +227,9 @@ layout(set = 0, binding = 3, std430) buffer _18_17
     _7 _m0;
 } _17;
 
-layout(location = 0) in float _71;
-layout(location = 1) in vec3 _73;
-layout(location = 2) in float _75;
+layout(location = 0) in float _73;
+layout(location = 1) in vec3 _75;
+layout(location = 2) in float _77;
 
 void main()
 {
@@ -278,8 +278,8 @@ layout(set = 0, binding = 3, std430) buffer _18_17
 
 void main()
 {
-    _7 _86 = _7(0.0, vec3(0.0), 0.0);
-    _86 = _14._m0;
-    _86 = _17._m0;
+    _7 _88 = _7(0.0, vec3(0.0), 0.0);
+    _88 = _14._m0;
+    _88 = _17._m0;
 }
 

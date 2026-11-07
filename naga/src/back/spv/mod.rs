@@ -108,6 +108,8 @@ mod ray;
 mod reclaimable;
 mod selection;
 mod subgroup;
+#[cfg(all(test, feature = "wgsl-in"))]
+mod wrapped_globals;
 mod writer;
 
 pub use nt::spv::*;

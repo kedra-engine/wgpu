@@ -51,7 +51,7 @@ OpMemberDecorate %21 0 Offset 0
 %27 = OpAccessChain  %26  %20 %8
 OpBranch %33
 %33 = OpLabel
-%36 = OpAccessChain  %34  %27 %35
+%36 = OpAccessChain  %34  %20 %8 %35
 %37 = OpCooperativeMatrixLoadKHR  %12  %36 %10 %7
 OpStore %28 %37
 %38 = OpLoad  %4  %14
@@ -60,7 +60,7 @@ OpStore %28 %37
 %41 = OpCooperativeMatrixMulAddKHR  %12  %38 %39 %40
 OpStore %31 %41
 %42 = OpLoad  %12  %31
-%43 = OpAccessChain  %34  %27 %8
+%43 = OpAccessChain  %34  %20 %8 %8
 OpCooperativeMatrixStoreKHR %43 %42 %10 %7
 %44 = OpLoad  %12  %31
 OpStore %28 %44
